@@ -49,7 +49,7 @@ export default function Delete({item, remove}: {item: GetMember['data'][0], remo
                 <div onClick={(e) => e.stopPropagation()} className="grid gap-y-2 bg-slate-50 rounded-md border border-slate-300 p-4 w-full max-w-sm mx-auto anim-modal">
                     <input type='text' name='id' value={item.id} className='hidden' />
                     <h1 className="text-lg font-semibold">Delete</h1>
-                    <h1>Are you sure you want to delete "<span className="font-medium">{item.name}</span>"?</h1>
+                    <h1>Are you sure you want to delete &quot;<span className="font-medium">{item.name}</span>&quot;?</h1>
                     <div className="flex items-center justify-end gap-x-6 mt-6">
                         <button type="button" onClick={() => setShow(false)} className="font-semibold text-sm text-slate-600">Cancel</button>
                         <button type="submit" className="font-semibold text-sm text-red-700">Delete</button>

@@ -48,7 +48,7 @@ export default function Table({member, search}: {member: GetMember, search: stri
             <h1 className="text-sm">Showing <span className="font-medium">{member.from}</span> to <span className="font-medium">{member.to}</span> of <span className="font-medium">{member.total}</span> result{member.total > 1 ? 's' : ''}</h1>
           <Pagination current_page={member.current_page} last_page={member.last_page} />
         </div></> : search ? 
-        <h1 className="text-slate-600 text-center py-4">No results for &apos;<span className="text-slate-950">{search}</span>&apos;</h1> :
+        <h1 className="text-slate-600 text-center py-4">No results for &quot;<span className="text-slate-950">{search}</span>&quot;</h1> :
         <h1 className="text-slate-600 text-center py-4">No data</h1>
     )
 }
