@@ -14,6 +14,7 @@ export default function Form() {
 
   useEffect(() => {
     if (state?.success) {
+      setText('')
       window.location.reload()
     } else if (state?.error) {
       setPassword('')

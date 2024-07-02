@@ -14,6 +14,7 @@ export default function Logout() {
 
     useEffect(() => {
         if (state?.success || state?.unauth) {
+          setText('')
           window.location.href = '/login'
         } else if (state?.error) {
           setText(state.error)
