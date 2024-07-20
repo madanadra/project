@@ -99,12 +99,14 @@ export async function logout(_current: any) {
 export async function create_member(_current: any, e: FormData) {
     const name = e.get('name')
     const tel = e.get('tel')
+    const birth_date = e.get('birth-date')
     
     try {
         const { data } = await axios.post(process.env.NEXT_PUBLIC_BASE_API+'/create-member', 
         {
             name: name,
-            tel: tel
+            tel: tel,
+            birth_date: birth_date
         }, 
         {
             headers: { Authorization: 'Bearer '+cookies().get('auth-id')?.value }
@@ -129,12 +131,14 @@ export async function edit_member(_current: any, e: FormData) {
     const id = e.get('id')
     const name = e.get('name')
     const tel = e.get('tel')
+    const birth_date = e.get('birth-date')
     
     try {
         const { data } = await axios.patch(process.env.NEXT_PUBLIC_BASE_API+'/edit-member/'+id, 
         {
             name: name,
-            tel: tel
+            tel: tel,
+            birth_date: birth_date
         }, 
         {
             headers: { Authorization: 'Bearer '+cookies().get('auth-id')?.value }

@@ -10,6 +10,7 @@ export type GetMember = {
         id: string
         name: string
         tel: string
+        birth_date: string
         created_at: string | null
     }[]
     from: number

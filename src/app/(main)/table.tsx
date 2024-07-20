@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import Edit from "./edit";
 import Delete from "./delete";
 import Pagination from "./pagination";
+import moment from "moment";
 
 export default function Table({member, search}: {member: GetMember, search: string}) {
     const [data, setData] = useState<GetMember['data']>(member.data)
@@ -26,6 +27,7 @@ export default function Table({member, search}: {member: GetMember, search: stri
                     <td className="p-4">ID</td>
                     <td className="p-4">Name</td>
                     <td className="p-4">Tel</td>
+                    <td className="p-4">Birth date</td>
                     <td className="p-4">Actions</td>                  
                 </tr>
             </thead>
@@ -35,6 +37,7 @@ export default function Table({member, search}: {member: GetMember, search: stri
                         <td className="p-4 text-sm text-slate-600">{item.id.slice(0, 3)}...{item.id.slice(-4)}</td>
                         <td className="p-4 text-sm">{item.name}</td>
                         <td className="p-4 text-sm text-slate-600">{item.tel}</td>
+                        <td className="p-4 text-sm text-slate-600">{moment(item.birth_date).format('ll')}</td>
                         <td className="p-4 flex items-center gap-x-2">
                             <Edit item={item} />
                             <Delete item={item} remove={remove} />

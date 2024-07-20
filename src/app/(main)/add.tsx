@@ -57,6 +57,11 @@ export default function Add() {
                             <input type='tel' name='tel'
                             className='bg-slate-50 rounded-md py-2 px-3 ring-1 ring-inset ring-slate-300 focus:ring-2 focus:ring-slate-950 outline-none' />
                         </div>
+                        <div className='grid gap-y-2'>
+                            <h1 className='font-medium'>Birth date</h1>
+                            <input type='date' name='birth-date'
+                            className='bg-slate-50 rounded-md py-2 px-3 ring-1 ring-inset ring-slate-300 focus:ring-2 focus:ring-slate-950 outline-none' />
+                        </div>
                     </div>
                     <div className="flex items-center justify-end gap-x-6 mt-6">
                         <button type="button" onClick={() => setShow(false)} className="font-semibold text-sm text-slate-600">Cancel</button>
