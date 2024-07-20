@@ -52,22 +52,22 @@ export default function Edit({item}: {item: GetMember['data'][0]}) {
                         <div className='grid gap-y-2'>
                             <h1 className='font-medium'>ID</h1>
                             <input type='text' name='id' value={item.id} disabled
-                            className='bg-slate-300 rounded-md py-2 px-3 ring-1 ring-inset ring-slate-300 outline-none' />
+                            className='w-full bg-slate-300 rounded-md py-2 px-3 ring-1 ring-inset ring-slate-300 outline-none' />
                         </div>
                         <div className='grid gap-y-2'>
                             <h1 className='font-medium'>Name</h1>
                             <input type='text' name='name' defaultValue={item.name}
-                            className='bg-slate-50 rounded-md py-2 px-3 ring-1 ring-inset ring-slate-300 focus:ring-2 focus:ring-slate-950 outline-none' />
+                            className='w-full bg-slate-50 rounded-md py-2 px-3 ring-1 ring-inset ring-slate-300 focus:ring-2 focus:ring-slate-950 outline-none' />
                         </div>
                         <div className='grid gap-y-2'>
                             <h1 className='font-medium'>Tel</h1>
                             <input type='tel' name='tel' defaultValue={item.tel}
-                            className='bg-slate-50 rounded-md py-2 px-3 ring-1 ring-inset ring-slate-300 focus:ring-2 focus:ring-slate-950 outline-none' />
+                            className='w-full bg-slate-50 rounded-md py-2 px-3 ring-1 ring-inset ring-slate-300 focus:ring-2 focus:ring-slate-950 outline-none' />
                         </div>
                         <div className='grid gap-y-2'>
                             <h1 className='font-medium'>Birth date</h1>
                             <input type='date' name='birth-date' defaultValue={item.birth_date}
-                            className='bg-slate-50 rounded-md py-2 px-3 ring-1 ring-inset ring-slate-300 focus:ring-2 focus:ring-slate-950 outline-none' />
+                            className='w-full bg-slate-50 rounded-md py-2 px-3 ring-1 ring-inset ring-slate-300 focus:ring-2 focus:ring-slate-950 outline-none' />
                         </div>
                     </div>
                     <div className="flex items-center justify-end gap-x-6 mt-6">
